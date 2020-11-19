@@ -1,0 +1,53 @@
+@startuml Chess
+
+Chess *-down-> "2"  Player
+Chess *--> Board
+Chess *--> Turn
+
+Turn --> Player
+
+Player *--> Movement
+Player *--> Color
+Player *--> "16" Piece
+Board *--> "64" Square
+
+MovementRule <|-down-KnightJump
+MovementRule <|-down-SingleStep
+MovementRule <|-down-MultipleStep
+
+SingleStep <|-down- Step
+MultipleStep <|-down- Step
+
+Step <|-down-Back
+Step <|-down-Front
+Step <|-down-Right
+Step <|-down-Left
+Step <|-down-BackRight
+Step <|-down-FrontRight
+Step <|-down-BackLeft
+Step <|-down-FrontLef
+
+Piece *-down-> "n"  MovementRule
+
+Movement *--> Goal
+Goal <|-down-CheckMate
+Goal <|-down-Capture
+Movement --> Piece
+
+Square *--> Coordinate
+Coordinate *--> Row
+Coordinate *--> Column
+
+Square o--> "1" Piece
+
+Piece  *--> Color
+Color  <|-down- White
+Color  <|-down- Black
+Piece  <|-down- King
+Piece  <|-down- Queen
+Piece  <|-down- Rook
+Piece  <|-down- Bishop
+Piece  <|-down- Knight
+Piece  <|-down- Pawn
+
+@enduml

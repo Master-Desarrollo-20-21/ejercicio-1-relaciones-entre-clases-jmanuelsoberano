@@ -1,5 +1,7 @@
 # Ejercicio 1 de Diseño Orientado a Objetos
 
+![Modelo del Dominio](domain-model.png)
+
 Repasar y recomponer el diagrama de clases del Juego de Mastermind en base a las explicaciones de la clase 2 del curso de Diseño Orientado a Objetos relativas a las relaciones entre clases.
 
 La idea de esta práctica consiste en aplicar los conocimientos de relaciones entre clases al juego de Mastermind, para comprobar si todas las realaciones que se diseñaron en su momento están bien realizadas, si quizás convendría cambiar algún tipo de relación entre clases, para llegar a un mejor diseño.
